@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import { readEvents } from '../actions';
 
-class EventsIndex extends React.Component {
+class EventsIndex extends Component {
   componentDidMount() {
     this.props.readEvents()
   }

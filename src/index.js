@@ -18,7 +18,7 @@ ReactDOM.render(
     <React.StrictMode>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/events/new" component={EventsNew} />
+          <Route path="/events/new" component={EventsNew} />
           <Route exact path="/" component={EventsIndex} />
         </Switch>
       </BrowserRouter>
