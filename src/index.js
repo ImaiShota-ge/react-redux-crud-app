@@ -12,12 +12,14 @@ import EventsIndex from './components/events_index';
 import EventsNew from './components/events_new';
 import EventsShow from './components/events_show';
 import * as serviceWorker from './serviceWorker';
+import { MuiThemeProvider } from 'material-ui';
 
 const enhancer = process.env.NODE_ENV === 'development' ?
   composeWithDevTools(applyMiddleware(thunk)) : applyMiddleware(thunk)
 const store = createStore(reducer, enhancer)
 
 ReactDOM.render(
+  <MuiThemeProvider>
   <Provider store={store}>
     <React.StrictMode>
       <BrowserRouter>
@@ -29,7 +31,8 @@ ReactDOM.render(
         </Switch>
       </BrowserRouter>
     </React.StrictMode>
-  </Provider>,
+  </Provider>
+  </MuiThemeProvider>,
   document.getElementById('root')
 );
 
